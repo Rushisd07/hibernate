@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-mapping>  
+  <class name="com.collections.Book" table="book">  
+    <id name="bk_id" column="bk_id" type="int" length="1">  
+    	<generator class="increment"/>
+    	
+    </id>  
+     <property name="bk_name" column="bk_name" type="string" length="20"/>
+     <property name="publisher" column="publisher" type="string" length="20"/>
+     
+     
+     <set name="author" table="book_auth_set">
+     	<key column="bk_id"/>
+     	<element column="author" type="string" length="20"/>
+     </set>
+    
+        
+  </class>  
+            
+</hibernate-mapping>

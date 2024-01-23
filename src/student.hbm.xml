@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-mapping>  
+  <class name="com.demo.StudentBean" table="student">  
+    <id name="stdId" column="stdid" type="int" length="1">  
+    	<generator class="increment"/>
+    	
+    </id>  
+     
+    <property name="stdName" column="stdname" type="string" length="20"/>
+    
+          
+  </class>  
+            
+</hibernate-mapping>

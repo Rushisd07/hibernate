@@ -1,0 +1,11 @@
+/book_list.hbm.xml
+/book_map.hbm.xml
+/book_set.hbm.xml
+/com/
+/composition_date.hbm.xml
+/disc_fm.hbm.xml
+/disc_hm.hbm.xml
+/disc_vm.hbm.xml
+/disk.hbm.xml
+/hibernate.cfg.xml
+/student.hbm.xml

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-mapping>  
+  <class name="com.mapping.inheritance.horizontal.Disc" table="disc_hm">  <!-- package name.java class name    &   DB table name -->
+  
+    <id name="Id" column="Id" type="int" length="1">  <!-- name=beanProperty name -->
+    	<generator class="increment"/>
+    	
+    </id>  
+     
+
+    <property name="Name" column="Name" type="string" length="20"/>	<!-- name=beanProperty name & column=DB column name -->
+    <property name="Price" column="Price" type="int" length="1"/>
+    
+    <union-subclass name="com.mapping.inheritance.horizontal.AudioDisc" table="disc_hm_audio">
+    	
+    	<property name="SingerName" column="SingerName" type="string" length="20"/>
+    	<property name="NoOfSongs" column="NoOfSongs" type="int" length="1"/>
+    	
+    </union-subclass>
+	
+	<union-subclass name="com.mapping.inheritance.horizontal.VideoDisc" table="disc_hm_video">
+    	
+    	<property name="Director" column="Director" type="string" length="20"/>
+    	<property name="videoFormat" column="videoFormat" type="string" length="20"/>
+    	
+    </union-subclass>
+	          
+  </class>  
+            
+</hibernate-mapping>
